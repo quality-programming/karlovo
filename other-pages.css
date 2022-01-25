@@ -24,8 +24,8 @@ header {
   position: relative;
 
   background-image: linear-gradient(
-      rgba(39, 39, 39, 0.411),
-      rgba(39, 39, 39, 0)
+      rgba(39, 39, 39, 0.767),
+      rgba(39, 39, 39, 0.198)
     ),
     url(images/r-kashta-2.jpg);
   background-size: cover;
