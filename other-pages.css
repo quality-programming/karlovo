@@ -19,6 +19,17 @@ body {
   font-size: 24px;
 }
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff4e6;
+  background: #9c4f0b;
+}
+
+::selection {
+  color: #fff4e6;
+  background: #da7218;
+}
+
 header {
   height: 450px;
   position: relative;
