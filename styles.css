@@ -222,6 +222,18 @@ section {
   text-align: right;
 }
 
+.footer-btn-container {
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accentBtn.footer-btn {
+  padding: 18px 38px;
+  font-size: 24px;
+}
+
 footer {
   font-size: 12px;
   color: #868e96;
