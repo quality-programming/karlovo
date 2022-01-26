@@ -106,7 +106,6 @@ nav {
 }
 
 header h1 {
-  text-align: center;
   margin: 80px auto;
   max-width: 724px;
   text-align: center;
@@ -186,6 +185,7 @@ p {
 }
 
 .testimonial-orange-container h3 {
+  margin-top: 16px;
   color: #ffe8cc;
 }
 

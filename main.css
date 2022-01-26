@@ -1,0 +1,242 @@
+/*
+              SPACING SYSTEM (px)
+              2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+              FONT SIZE SYSTEM (px)
+              10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+              */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff4e6;
+  color: #343a40;
+  font-size: 24px;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff4e6;
+  background: #da7218;
+}
+
+::selection {
+  color: #fff4e6;
+  background: #da7218;
+}
+
+header {
+  height: 420px;
+  position: relative;
+
+  background-image: linear-gradient(
+      rgba(39, 39, 39, 0.411),
+      rgba(39, 39, 39, 0)
+    ),
+    url(images/home-page-image.jpg);
+  background-size: cover;
+  background-position: center;
+  color: #fff4e6;
+}
+
+nav {
+  background: rgba(226, 112, 6, 0.774);
+  background: linear-gradient(
+    to bottom,
+    rgba(202, 105, 14, 0.787) 0%,
+    rgba(143, 76, 14, 0.705) 80%,
+    rgba(138, 75, 16, 0.787) 100%
+  );
+  width: 100%;
+}
+
+.nav-container {
+  max-width: 724px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-height: 54px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-links-container {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.07);
+  text-decoration: none;
+  display: inline-block;
+  transition: color 200ms ease;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: #ffe8cc;
+}
+
+.nav-link.nav-link--bold {
+  margin-right: 48px;
+  font-weight: 700;
+}
+
+.logo {
+  height: 48px;
+}
+
+header h1 {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 724px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.513);
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+  line-height: 1.05;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Accent Blocks */
+.accentBlocks {
+  display: grid;
+  grid-template-columns: repeat(3, 330px);
+  column-gap: 70px;
+  justify-content: center;
+}
+
+.baseBlock {
+  background-color: #fff4e6;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.308);
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.baseBlock h3 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #343a40;
+}
+
+.baseBlock p {
+  color: #343a40;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.accentBtn:link,
+.accentBtn:visited {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #9c4f0b;
+  color: #fff4e6;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  transition: background-color 200ms ease;
+}
+
+.accentBtn:hover {
+  background-color: #b85f11;
+}
+
+/* Orange Base block */
+.baseBlock--orange {
+  background-color: #9c4f0b;
+}
+
+.baseBlock--orange h3,
+.baseBlock--orange p {
+  color: #fff4e6;
+}
+
+.accentBtn--orange:link,
+.accentBtn--orange:visited {
+  background-color: #fff4e6;
+  color: #343a40;
+  transition: background-color 200ms ease;
+}
+
+.accentBtn--orange:hover,
+.accentBtn--orange:active {
+  background-color: #ffd8a8;
+}
+
+/* Section */
+section {
+  width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 96px;
+  background-color: #fff4e6;
+}
+
+.intro-section {
+  padding: 250px 0 96px 0;
+  text-align: center;
+}
+
+/* Testimonial section */
+.grid-4-rows {
+  display: grid;
+  grid-template-columns: 330px 330px;
+  column-gap: 64px;
+  row-gap: 96px;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-4-rows img {
+  border-radius: 12px;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.308);
+}
+
+.grid-4-rows p:nth-child(odd) {
+  text-align: right;
+}
+
+.footer-btn-container {
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accentBtn.footer-btn {
+  padding: 18px 38px;
+  font-size: 24px;
+}
+
+footer {
+  font-size: 12px;
+  color: #868e96;
+  text-align: center;
+  margin-bottom: 24px;
+}
