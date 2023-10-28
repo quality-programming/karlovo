@@ -35,8 +35,8 @@ header {
   position: relative;
 
   background-image: linear-gradient(
-      rgba(39, 39, 39, 0.411),
-      rgba(39, 39, 39, 0)
+      rgba(39, 39, 39, 0.699),
+      rgba(39, 39, 39, 0.204)
     ),
     url(images/home-page-image.jpg);
   background-size: cover;
@@ -58,13 +58,11 @@ nav {
 .nav-container {
   max-width: 724px;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 8px 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-height: 54px;
 }
 
 .logo-container {
@@ -199,7 +197,7 @@ section {
 }
 
 .intro-section {
-  padding: 250px 0 96px 0;
+  padding: 250px 0 80px 0;
   text-align: center;
 }
 
@@ -207,8 +205,8 @@ section {
 .grid-4-rows {
   display: grid;
   grid-template-columns: 330px 330px;
-  column-gap: 64px;
-  row-gap: 96px;
+  column-gap: 48px;
+  row-gap: 80px;
   justify-content: center;
   align-items: center;
 }
