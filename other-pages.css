@@ -204,3 +204,55 @@ footer {
   text-align: center;
   margin-bottom: 24px;
 }
+
+/* ////////////////////////////////// *
+/* HOTELS PAGE */
+.hotels {
+  display: grid;
+  column-gap: 48px;
+  row-gap: 64px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hotel {
+  display: flex;
+  flex-grow: 1;
+  gap: 24px;
+}
+
+.hotel img {
+  display: block;
+  max-width: 320px;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  box-shadow: 0px 5px 30px 0px rgba(0, 0, 0, 0.308);
+}
+
+.hotel-details-price {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.hotel-details-price em {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.accentBtn:link,
+.accentBtn:visited {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #9c4f0b;
+  color: #fff4e6;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 12px;
+  transition: background-color 200ms ease;
+}
+
+.accentBtn:hover {
+  background-color: #b85f11;
+}
