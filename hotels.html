@@ -12,6 +12,7 @@
     />
     <link rel="stylesheet" href="other-pages.css" />
     <link rel="icon" type="image/png" href="images/Karlovo-gerb.png" />
+    <script defer src="js/script.js"></script>
     <title>Хотели</title>
     <style>
       /*
@@ -36,7 +37,7 @@
       }
 
       section h2 {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
       }
     </style>
   </head>
@@ -134,7 +135,106 @@
     </section>
 
     <section class="form-section">
-      <h2>Резервирайте своята почивка сега!</h2>
+      <div class="form-section-inner-container">
+        <div class="form-text-box">
+          <h2>Резервирайте своята почивка сега!</h2>
+          <!-- име, фамилия, дата на пристигане, дата на напускане, брой нощувки -->
+          <!-- брой, посетители, тип стоая -->
+          <!-- калкулирана цена -->
+          <form class="reservation-form" action="#">
+            <div>
+              <label for="selectHotel">Хотел</label>
+              <select id="selectHotel" required>
+                <option value="" disabled selected hidden>
+                  Изберете хотел
+                </option>
+                <option value="hotel-yaev">Хотел Яев</option>
+                <option value="hotel-central">Хотел Central</option>
+                <option value="lux-apart">Lux Apart</option>
+                <option value="hotel-almond">Хотел Алмонд</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="firstName">Име и фамилия</label>
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Име и фамилия на резервацията"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="email">Имейл адрес</label>
+              <input
+                type="text"
+                id="email"
+                placeholder="johnsmith@email.com"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="phone">Телефонен номер</label>
+              <input
+                type="tel"
+                id="phone"
+                pattern="[0]{1}[8-9]{1}[0-9]{8}"
+                placeholder="08XXXXXXXX"
+                required
+              />
+            </div>
+
+            <div>
+              <label for="arrivalDate">Дата на пристигане</label>
+              <input type="date" id="arrivalDate" required />
+            </div>
+
+            <div>
+              <label for="departureDate">Дата на напускане</label>
+              <input type="date" id="departureDate" required />
+            </div>
+
+            <div>
+              <label for="calcNights">Избран брой нощувки</label>
+              <input type="number" id="nights" disabled required />
+            </div>
+
+            <div>
+              <label for="guests">Брой посетители</label>
+              <input type="number" id="guests" value="1" required />
+            </div>
+
+            <div>
+              <label for="roomType">Тип стая</label>
+              <select id="roomType" required>
+                <option value="" disabled selected hidden>
+                  Изберете тип стая
+                </option>
+                <option value="standart">Стандартна</option>
+                <option value="premium">Премиум (+20% от цената)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="price">Крайна цена (лв)</label>
+              <input type="text" id="price" disabled />
+            </div>
+
+            <input
+              class="reservation-form-btn"
+              type="submit"
+              value="Следваща стъпка &rarr;"
+            />
+          </form>
+        </div>
+        <div
+          class="form-img-box"
+          role="img"
+          aria-label="Hotel in Karlovo"
+        ></div>
+      </div>
     </section>
 
     <footer>Copyright © 2022 Stefan Gogov. All Rights Reserved.</footer>
