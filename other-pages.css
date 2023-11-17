@@ -378,7 +378,7 @@ footer {
   gap: 32px;
 }
 
-.payment-form .confirm-btn {
+.payment-form .pay-btn {
   align-self: end;
   cursor: pointer;
   color: #fff4e6;
@@ -389,7 +389,49 @@ footer {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.confirm-btn:hover {
+.pay-btn:hover {
+  background-position: 0 0;
+  filter: brightness(1.05);
+}
+
+/* DISPLAY CONFIRMATION */
+.confirm-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.confirm-icon {
+  display: block;
+  height: 128px;
+  margin-bottom: 32px;
+}
+
+.confirm-title {
+  margin-bottom: 28px;
+}
+
+.confirm-subtitle {
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.reserve-again-btn:link,
+.reserve-again-btn:visited {
+  font-size: 18px;
+  padding: 12px 24px;
+  color: #fff4e6;
+  border-radius: 9px;
+  text-decoration: none;
+
+  background: linear-gradient(120deg, #fb7b0b, #b85f11, #fb7b0b);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.reserve-again-btn:hover {
   background-position: 0 0;
   filter: brightness(1.05);
 }

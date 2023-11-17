@@ -32,6 +32,7 @@ const priceInput = document.getElementById("price");
 const selectHotel = document.getElementById("selectHotel");
 
 // Payment form elements
+const paymentForm = document.querySelector(".payment-form");
 const cardNumberInput = document.getElementById("cardNumber");
 const cardExpirationInput = document.getElementById("cardExpiration");
 
@@ -113,25 +114,9 @@ function updateForm() {
   summaryRoomType.textContent = selectedRoomType;
   summaryGuests.textContent = selectedGuests;
   summaryPrice.textContent = totalPrice;
-
-  submitReservationForm();
 }
 
-function submitReservationForm() {
-  const reservationForm = document.querySelector(".reservation-form");
-  const paymentForm = document.querySelector(".payment-form");
-  const formSummary = document.querySelector(".form-summary");
-  const formDisclaimer = document.querySelector(".form-disclaimer");
-
-  reservationForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    paymentForm.style = "display: grid";
-    formSummary.style = "display: block";
-    formDisclaimer.style = "display: block";
-    reservationForm.style = "display: none";
-  });
-}
+/////////////////////// HELPER FUNCTIONS FOR RESERVATION FORM ///////////////////////
 
 function parseDate(dateString) {
   return new Date(dateString);
@@ -200,6 +185,8 @@ function resetForm() {
   priceInput.value = "";
 }
 
+/////////////////////// HELPER FUNCTIONS FOR PAYMENT FORM ///////////////////////
+
 // Function to format input with spaces or slashes
 function formatInput(event, pattern, separator, maxLength) {
   let input = event.target;
@@ -255,5 +242,60 @@ function validateCardExpiration() {
   }
 }
 
+/////////////////////// FUNCTIONS FOR THE VIEW ///////////////////////
+
+function submitReservationForm() {
+  const reservationForm = document.querySelector(".reservation-form");
+  const formSummary = document.querySelector(".form-summary");
+  const formDisclaimer = document.querySelector(".form-disclaimer");
+
+  reservationForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    paymentForm.style = "display: grid";
+    formSummary.style = "display: block";
+    formDisclaimer.style = "display: block";
+    reservationForm.style = "display: none";
+  });
+}
+
+function displayPaymentConfirmation() {
+  const formTextBox = document.querySelector(".form-text-box");
+
+  // Remove all children from form text box
+  while (formTextBox.firstChild) {
+    formTextBox.removeChild(formTextBox.firstChild);
+  }
+
+  // HTML content for the confirmation message
+  let confirmationHTML = `
+    <div class="confirm-container">
+      <img
+        class="confirm-icon"
+        src="images/payment-complete.svg"
+        alt="Payment complete icon"
+      />
+      <h2 class="confirm-title">Плащането е успешно!</h2>
+      <h3 class="confirm-subtitle">Благодарим Ви за резервацията!</h3>
+      <a class="reserve-again-btn" href="hotels.html"
+        >Резервирай отново</a
+      >
+    </div>
+  `;
+
+  // Insert the confirmation message
+  formTextBox.insertAdjacentHTML("afterbegin", confirmationHTML);
+}
+
+function submitPaymentForm() {
+  paymentForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    displayPaymentConfirmation();
+  });
+}
+
 // Initialize on page load
 updateForm();
+submitReservationForm();
+submitPaymentForm();
