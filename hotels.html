@@ -141,7 +141,7 @@
           <!-- име, фамилия, дата на пристигане, дата на напускане, брой нощувки -->
           <!-- брой, посетители, тип стоая -->
           <!-- калкулирана цена -->
-          <form class="reservation-form" action="#">
+          <form class="form reservation-form" action="#">
             <div>
               <label for="selectHotel">Хотел</label>
               <select id="selectHotel" required>
@@ -226,6 +226,59 @@
               class="reservation-form-btn"
               type="submit"
               value="Следваща стъпка &rarr;"
+            />
+          </form>
+          <form class="form payment-form" action="#">
+            <div>
+              <label for="cardNumber">Номер на карта</label>
+              <input
+                type="text"
+                id="cardNumber"
+                pattern="[0-9]{16}"
+                maxlength="16"
+                placeholder="XXXX XXXX XXXX XXXX"
+                required
+              />
+            </div>
+
+            <div class="payment-form-expiry-cvv">
+              <div>
+                <label for="cardExpiration">Валидност</label>
+                <input
+                  type="text"
+                  id="cardExpiration"
+                  pattern="[0-9]{2}[/]{1}[0-9]{2}"
+                  placeholder="MM/YY"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="cardCVV">CVV</label>
+                <input
+                  type="text"
+                  id="cardCVV"
+                  pattern="[0-9]{3}"
+                  placeholder="XXX"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="cardHolder">Име на картодържател</label>
+              <input
+                type="text"
+                id="cardHolder"
+                placeholder="Име и фамилия"
+                required
+              />
+            </div>
+
+            <input
+              class="confirm-btn"
+              type="submit"
+              value="Потвърди резервацията ✅"
             />
           </form>
         </div>

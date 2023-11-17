@@ -68,6 +68,20 @@ function updateForm() {
 
   nightsInput.value = nights;
   priceInput.value = totalPrice;
+
+  submitReservationForm();
+}
+
+function submitReservationForm() {
+  const reservationForm = document.querySelector(".reservation-form");
+
+  reservationForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const paymentForm = document.querySelector(".payment-form");
+    paymentForm.style = "display: grid";
+    reservationForm.style = "display: none";
+  });
 }
 
 function parseDate(dateString) {
